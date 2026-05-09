@@ -117,3 +117,57 @@ Kiểm tra:
 ```
 cloudflared --version
 ```
+
+<img width="1125" height="638" alt="image" src="https://github.com/user-attachments/assets/f3811ba0-b814-49f0-b12f-d017c7e824b8" />
+
+## Đăng nhập Cloudflare
+```
+cloudflared tunnel login
+```
+
+Tạo tunnel luôn
+
+Chạy:
+```
+cloudflared tunnel create wordpress
+```
+
+Tạo file config
+
+Chạy:
+```
+nano ~/.cloudflared/config.yml
+```
+Dán này vào:
+```
+  GNU nano 7.2                              /home/admin1/.cloudflared/config.yml *
+tunnel: 53f347fc-e3b4-4c2b-a972-437afa1a63f6
+
+credentials-file: /home/admin1/.cloudflared/53f347fc-e3b4-4c2b-a972-437afa1a63f6.json
+
+ingress:
+  - hostname: wp.minhluong204.id.vn
+    service: http://localhost:8001
+  - service: http_status:404
+```
+Sau đó lưu:
+```
+Ctrl + O
+Enter
+Ctrl + X
+```
+Tạo DNS
+```
+cloudflared tunnel route dns wordpress wp.minhluong204.id.vn
+```
+Chạy tunnel
+```
+cloudflared tunnel run wordpress
+```
+
+<img width="1114" height="630" alt="image" src="https://github.com/user-attachments/assets/858a46a4-08de-4ae7-943f-baa2cc56a283" />
+
+Sau đó mở trình duyệt
+```
+https://wp.minhluong204.id.vn
+```
