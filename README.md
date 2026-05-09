@@ -79,6 +79,9 @@ docker ps
 
 
 <img width="1127" height="651" alt="image" src="https://github.com/user-attachments/assets/16fe539b-af4e-42bb-adad-b75f3ea6f516" />
+## Giao diện phpMyadmin
+
+<img width="1127" height="561" alt="image" src="https://github.com/user-attachments/assets/713e1e3a-d821-41bc-9b21-8d3d5dfdbd4f" />
 
 ## Giao diện WORDPRESS
 Mở trình duyệt :
