@@ -117,9 +117,9 @@ docker ps
 
 ## Ảnh docker ps
 
-> Chèn ảnh docker ps tại đây
 
-<img width="1127" height="651" alt="image" src="https://github.com/user-attachments/assets/16fe539b-af4e-42bb-adad-b75f3ea6f516" />
+<img width="1362" height="408" alt="image" src="https://github.com/user-attachments/assets/418dc14e-a784-409c-bdf0-60867d3d7da3" />
+
 
 ---
 
@@ -137,13 +137,10 @@ http://192.168.1.16:8081
 
 phpMyAdmin dùng để xem database MariaDB và quản lý cơ sở dữ liệu của WordPress.
 
-## Ảnh đăng nhập phpMyAdmin
+## Ảnh database wordpress và các bảng wp_
 
 <img width="1127" height="561" alt="image" src="https://github.com/user-attachments/assets/713e1e3a-d821-41bc-9b21-8d3d5dfdbd4f" />
 
-## Ảnh database wordpress và các bảng wp_
-
-> Chèn ảnh database wordpress tại đây
 
 ---
 
@@ -179,7 +176,7 @@ https://wp.minhluong204.id.vn/wp-admin
 
 ## Ảnh Dashboard WordPress
 
-> Chèn ảnh dashboard WordPress tại đây
+<img width="1345" height="699" alt="image" src="https://github.com/user-attachments/assets/a1ba7c9e-3b0a-45bf-8819-6223fdb3258f" />
 
 ---
 
@@ -209,9 +206,6 @@ Nội dung gồm:
 
 <img width="1361" height="732" alt="image" src="https://github.com/user-attachments/assets/36f8f9c4-9beb-4421-80da-e4e5e868bb23" />
 
-## Ảnh bài viết có video YouTube
-
-> Chèn ảnh video trong bài viết tại đây
 
 ---
 
@@ -314,7 +308,9 @@ https://wp.minhluong204.id.vn
 
 ## Ảnh website online bằng domain
 
-> Chèn ảnh website online tại đây
+
+<img width="1361" height="692" alt="image" src="https://github.com/user-attachments/assets/1e0886ab-51c6-4af5-a7d8-78152b02cefb" />
+
 
 ---
 
