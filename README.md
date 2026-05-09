@@ -345,15 +345,12 @@ thì tunnel đã chạy nền thành công.
 
 ---
 
-# Nhận xét về WordPress
+# Nhận xét
 
-Theo em, WordPress là một nền tảng mã nguồn mở khá dễ dùng để tạo website.  
-Giao diện quản trị trực quan nên người mới cũng có thể làm quen nhanh.  
+Sau khi hoàn thành bài tập này, em đã triển khai thành công website WordPress bằng Docker trên Ubuntu với các service MariaDB, phpMyAdmin và WordPress.  
 
-Việc sử dụng Docker giúp cài đặt nhanh hơn và dễ quản lý các service như MariaDB, phpMyAdmin và WordPress.  
+Ngoài ra em cũng đã sử dụng Cloudflare Tunnel để public website lên Internet thông qua subdomain riêng. Trong quá trình làm bài em hiểu thêm về cách hoạt động của Docker Compose, cách kết nối giữa các container và cách quản lý website bằng WordPress.  
 
-Trong quá trình làm bài em thấy WordPress hỗ trợ nhiều plugin và theme nên việc chỉnh sửa giao diện khá thuận tiện. Tuy nhiên nếu cài quá nhiều plugin thì sẽ tốn RAM và tài nguyên máy chủ hơn.  
+Qua bài tập em thấy WordPress khá dễ sử dụng, phù hợp cho việc tạo website nhanh. Docker giúp việc cài đặt và triển khai thuận tiện hơn nhiều so với cài trực tiếp trên máy. Tuy nhiên trong lúc cấu hình cũng có một số lỗi về port, SSL và Cloudflare Tunnel nên cần kiểm tra kỹ từng bước.  
 
-Ngoài ra việc sử dụng Cloudflare Tunnel giúp public website lên Internet khá dễ mà không cần mở port modem hay thuê VPS riêng.  
-
-Qua bài này em học được cách triển khai web bằng Docker, sử dụng WordPress và cách public website bằng Cloudflare Tunnel.
+Bài tập giúp em hiểu rõ hơn về triển khai ứng dụng mã nguồn mở trên Linux và có thêm kinh nghiệm thực tế khi cấu hình hệ thống web.
