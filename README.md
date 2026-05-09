@@ -2,12 +2,12 @@
 
 **Môn:** Phát triển ứng dụng với mã nguồn mở - TEE0421  
 **Lớp:** 58KTPM  
-
+**Sinh viên:**  Lăng Nguyễn Minh Lượng - K225480106044
 ---
 
 # Yêu cầu bài tập
 
-Sử dụng Docker trên Ubuntu để triển khai:
+Sử dụng Docker trên Ubuntu để triển khai các service:
 
 - MariaDB
 - phpMyAdmin
@@ -17,6 +17,7 @@ Sau đó:
 - Public website bằng Cloudflare Tunnel
 - Tạo bài viết giới thiệu bản thân
 - Tạo bài viết giới thiệu ngành học yêu thích tại TNUT
+- Nhận xét việc sử dụng WordPress
 
 ---
 
@@ -27,7 +28,7 @@ mkdir wordpress-docker
 cd wordpress-docker
 ```
 
-Kiểm tra:
+Kiểm tra thư mục hiện tại:
 
 ```bash
 pwd
@@ -114,6 +115,10 @@ Kiểm tra container:
 docker ps
 ```
 
+## Ảnh docker ps
+
+> Chèn ảnh docker ps tại đây
+
 <img width="1127" height="651" alt="image" src="https://github.com/user-attachments/assets/16fe539b-af4e-42bb-adad-b75f3ea6f516" />
 
 ---
@@ -126,7 +131,19 @@ Truy cập:
 http://192.168.1.16:8081
 ```
 
+Đăng nhập:
+- User: root
+- Password: root123
+
+phpMyAdmin dùng để xem database MariaDB và quản lý cơ sở dữ liệu của WordPress.
+
+## Ảnh đăng nhập phpMyAdmin
+
 <img width="1127" height="561" alt="image" src="https://github.com/user-attachments/assets/713e1e3a-d821-41bc-9b21-8d3d5dfdbd4f" />
+
+## Ảnh database wordpress và các bảng wp_
+
+> Chèn ảnh database wordpress tại đây
 
 ---
 
@@ -138,6 +155,12 @@ Truy cập:
 http://192.168.1.16:8001
 ```
 
+Tiến hành:
+- Chọn ngôn ngữ
+- Tạo tài khoản admin
+- Đặt tên website
+- Hoàn thành cài đặt WordPress
+
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/8d63c9b7-8444-462f-b34a-7c3465be7489" />
 
 <img width="1365" height="768" alt="image" src="https://github.com/user-attachments/assets/4d8b1c88-08bf-4c81-8894-39167be3ee10" />
@@ -146,15 +169,49 @@ http://192.168.1.16:8001
 
 ---
 
-# Tạo bài viết giới thiệu bản thân
+# Dashboard quản trị WordPress
+
+Truy cập:
+
+```text
+https://wp.minhluong204.id.vn/wp-admin
+```
+
+## Ảnh Dashboard WordPress
+
+> Chèn ảnh dashboard WordPress tại đây
+
+---
+
+# Bài viết giới thiệu bản thân
+
+Em tạo một bài viết giới thiệu thông tin cá nhân, sở thích và định hướng tương lai.
+
+Nội dung có:
+- Hình ảnh
+- Thông tin cá nhân
+- Sở thích
+- Nội dung giới thiệu bản thân
 
 <img width="1364" height="691" alt="image" src="https://github.com/user-attachments/assets/47b8f1ce-3c32-41e5-b276-219aeb1143c9" />
 
 ---
 
-# Tạo bài viết ngành học yêu thích
+# Bài viết giới thiệu ngành học yêu thích
+
+Em tạo bài viết giới thiệu ngành Công nghệ thông tin tại TNUT.
+
+Nội dung gồm:
+- Giới thiệu ngành học
+- Một số lĩnh vực yêu thích
+- Hình ảnh
+- Video minh họa
 
 <img width="1361" height="732" alt="image" src="https://github.com/user-attachments/assets/36f8f9c4-9beb-4421-80da-e4e5e868bb23" />
+
+## Ảnh bài viết có video YouTube
+
+> Chèn ảnh video trong bài viết tại đây
 
 ---
 
@@ -187,6 +244,8 @@ cloudflared --version
 ```bash
 cloudflared tunnel login
 ```
+
+Sau khi chạy lệnh sẽ hiện link đăng nhập Cloudflare trên trình duyệt.
 
 ---
 
@@ -241,6 +300,8 @@ cloudflared tunnel route dns wordpress wp.minhluong204.id.vn
 cloudflared tunnel run wordpress
 ```
 
+## Ảnh tunnel hoạt động
+
 <img width="1114" height="630" alt="image" src="https://github.com/user-attachments/assets/858a46a4-08de-4ae7-943f-baa2cc56a283" />
 
 ---
@@ -250,6 +311,10 @@ cloudflared tunnel run wordpress
 ```text
 https://wp.minhluong204.id.vn
 ```
+
+## Ảnh website online bằng domain
+
+> Chèn ảnh website online tại đây
 
 ---
 
@@ -268,15 +333,31 @@ sudo systemctl enable cloudflared
 sudo systemctl start cloudflared
 ```
 
+Kiểm tra trạng thái:
+
+```bash
+systemctl status cloudflared
+```
+
+Nếu hiện:
+
+```text
+active (running)
+```
+
+thì tunnel đã chạy nền thành công.
+
 ---
 
 # Nhận xét về WordPress
 
-Theo em, WordPress là nền tảng mã nguồn mở khá dễ sử dụng để tạo website.  
-Việc triển khai bằng Docker giúp cài đặt nhanh và dễ quản lý hơn.  
+Theo em, WordPress là một nền tảng mã nguồn mở khá dễ dùng để tạo website.  
+Giao diện quản trị trực quan nên người mới cũng có thể làm quen nhanh.  
 
-Giao diện quản trị trực quan, phù hợp cho người mới học web. WordPress hỗ trợ nhiều plugin và theme nên dễ tùy biến giao diện.  
+Việc sử dụng Docker giúp cài đặt nhanh hơn và dễ quản lý các service như MariaDB, phpMyAdmin và WordPress.  
 
-Tuy nhiên nếu cài nhiều plugin thì sẽ tốn RAM và tài nguyên máy chủ hơn.  
+Trong quá trình làm bài em thấy WordPress hỗ trợ nhiều plugin và theme nên việc chỉnh sửa giao diện khá thuận tiện. Tuy nhiên nếu cài quá nhiều plugin thì sẽ tốn RAM và tài nguyên máy chủ hơn.  
 
-Trong quá trình làm bài em thấy Docker và Cloudflare Tunnel hỗ trợ public website rất thuận tiện.
+Ngoài ra việc sử dụng Cloudflare Tunnel giúp public website lên Internet khá dễ mà không cần mở port modem hay thuê VPS riêng.  
+
+Qua bài này em học được cách triển khai web bằng Docker, sử dụng WordPress và cách public website bằng Cloudflare Tunnel.
